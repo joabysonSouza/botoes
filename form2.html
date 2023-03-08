@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> formularios 2 </title>
+     <!-- <style>
+        body{
+            background-color:dimgray ;
+        }
+        fieldset{
+            border: 1px solid black;
+            background-color: rgba(0, 0, 0, 0.507);
+            border-radius: 8px 8px;
+            width: 500px;
+            height: 300px;
+            display: block;
+            margin: auto;
+            
+        }
+        p{
+            color: white;
+        }
+        legend{
+            color: white;
+        }
+        p.final{
+           
+            margin: auto;
+        } -->
+    </style> 
+</head>
+<body>
+    <form action="cadrasto.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <P> <label for="iuser">usuario :</label>
+                <input type="text" name="usuario" id="iuser" required minlength="4" placeholder="seu nome">
+            </P>
+            <p> <label for="imail">email:</labe>
+                <input type= "email" name="email" id="imail" required  placeholder="digite seu email" autocomplete="email">
+            </p>
+            <p> <label for="tel"> Telefone : <input type="tel" name="tel" id="tel" placeholder="(xx) xxxx-xxxx" required maxlength="9" minlength="9">
+            </label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>faixa salarial</legend>
+            <input type="radio" name="sal" id="salmin" checked> <label for="salmin" >de R$1200,00 á R$1500,00</label><br>
+            <input type="radio" name="sal" id="salmed"> <label for="salmed">de R$2000,00 à R$2500,00</label><br>
+            <input type="radio" name="sal" id="salmax"><label for="salmax"> de R$3000,00 á R$3500,00</label><br>
+        </fieldset>
+
+            <h2> Selecione seu estado </h2>
+                <label for="estado"> Estado</label>
+                <select name="estado" id="estado">
+                 
+                        
+                            <optgroup label="sul">
+                        <option value="#">---selecione---</option select >
+                        <option value="salvador">salvador</option>
+                        <option value=" fortaleza"> fortaleza</option>
+                        <option value="Vitória">Vitória</option>
+                        <option value="Goiânia">Goiânia</option>
+                        <option value="	Belo Horizonte">Belo Horizonte</option>
+                        <option value="João Pessoa">João Pessoa</option>
+                    </select>
+                    </optgroup>
+                    <p>
+                        <label for="prof">profissão</label>
+                        <input type="text" name="prof" id="prof" list="ilistP">
+                        <datalist id="ilistP">
+                            <option > desenvolvedor</option>
+                            <option >farmaceutico</option>
+                            <option >Professor</option>
+                            <option > Metarlugico</option>
+                            <option >Empreendedor</option>
+                        </datalist>
+                    
+                    </p>
+                    <p><label for="msg"> Mensagem</label> <br>
+                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea></p>
+                    
+
+
+
+
+
+            
+        <div>
+            <p class="final"> <input type="submit" value="enviar">
+                <input type="reset" value="reset">
+            </p>
+        </div>
+        
+    </form>
+</body>
+</html>

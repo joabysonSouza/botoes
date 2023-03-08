@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> formulario</title>
+</head>
+<body>
+    <h1> formulario para alunos</h1>
+    <form action="cadrasto.php" method="get" autocomplete="on">
+        <p> <label for="aluno"> aluno : <input type="text" name="aluno" id="aluno" autocomplete="name" placeholder="nome do aluno" required>
+            <label>
+            </p>
+        <p> <label for="media"> Media : <input type="number" name="media" id="media" required placeholder="0 a 10" value="5" step="0.1" max="10" min="0">
+        </label>
+        </p>
+        <p> <label for="data"> data da prova : <input type="date" name="data" id="data">
+        </label>
+        </p>
+        <p><label for="horario"> horario : <input type="time" name="horario" id="horario">
+        </label>
+        </p>
+        <input type="submit" value="enviar"> <input type="reset" value="voltar">
+    </form>
+    
+</body>
+</html>+
